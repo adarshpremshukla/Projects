@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+
+</head>
+
+<body>
+
+    <section class="responsive-font-example">
+        <div class="responsive-font-example">
+            <h1 class="responsive-font-example" id="about">Content Management </h1>
+            <div class="responsive-font-example" class="sampoorna">
+                <h4 class="responsive-font-example" id="about1">
+
+            </div>
+            </h4>
+
+        </div>
+        <br>
+    </section>
+
+    <h2 id="text1"></h2>
+    <div class="editor">
+
+        <input type="text" id="title" style="color: aliceblue;" placeholder="Enter Blog Title" />
+        <input type="url" id="image" style="color: aliceblue;" placeholder="Enter Image URL" />
+        <input type="text" id="video" style="color: aliceblue;" placeholder="Enter the Video URL">
+        <textarea id="content" rows="5" style="color: aliceblue;" placeholder="Enter Blog Content"></textarea>
+
+        <button onclick="addBlog()">ADD BLOG</button>
+    </div>
+
+    <div class="container">
+        <div class="preview" id="preview"></div>
+
+    </div>
+
+
+
+
+    <script>
+        function addBlog() {
+            var title = document.getElementById("title").value;
+            var image = document.getElementById("image").value;
+            var video = document.getElementById("video").value;
+            var content = document.getElementById("content").value;
+
+            var blogPost = document.createElement("div");
+            blogPost.className = "blog-post";
+            blogPost.innerHTML = `
+      <h3 id="titleinner" >${title}</h3>
+      
+      
+      <p id="innertext">${content}</p>
+      
+    `;
+
+            var previewSection = document.getElementById("preview");
+            previewSection.appendChild(blogPost);
+
+            document.getElementById("title").value = "";
+            document.getElementById("image").value = "";
+            document.getElementById("content").value = "";
+        }
+    </script>
+</body>
+
+</html>

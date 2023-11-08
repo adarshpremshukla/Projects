@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Management Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: oldlaceA;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #task-container {
+      background-color: cornflowerblue;
+      border-radius: 10px;
+      font-size: 2  0px;
+      padding: 80px;
+      max-width: 700px;
+      margin:  auto;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #task-list, #user-task-list {
+      list-style-type:none;
+      padding: 10px;
+    }
+
+    #task-input, #assignee-select {
+      width: 100%;
+      padding: 20px;
+      font-size: large;
+      margin-bottom: 40px;
+      border: 3px solid lightcoral;
+      border-radius: 10px;
+    }
+
+    #add-task-btn {
+      background-color: #4caf50;
+      color: red;
+      padding: 20px 300px;
+      border: 3px solid lightcoral;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    #user-task-section {
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 600px) {
+      #task-container {
+        padding: 100px;
+      }
+
+      #task-input, #assignee-select {
+        font-size: 25px;
+      }
+
+      #add-task-btn {
+        font-size: 1px;
+        text-align: left;
+
+      }
+
+      #user-task-list {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center; color: fuchsia; font-size: 50px;">Project Management Tool</h1>
+  
+  <div id="task-container">
+    <h2 style="color: springgreen;">Task List</h2>
+    <ul id="task-list"></ul>
+    <input type="text" id="task-input" placeholder="Add a new task">
+    <select id="assignee-select" multiple>
+      <option value="user1">User 1</option>
+      <option value="user2">User 2</option>
+      <option value="user3">User 3</option>
+    </select>
+    <button id="add-task-btn">Add Task</button>
+
+
+    <div id="user-task-section">
+      <h2 style="color: springgreen;">User Tasks</h2>
+      <ul id="user-task-list"></ul>
+    </div>
+
+    <script>
+      const taskInput = document.getElementById("task-input");
+      const addTaskBtn = document.getElementById("add-task-btn");
+      const taskList = document.getElementById("task-list");
+      const userTaskList = document.getElementById("user-task-list");
+      const assigneeSelect = document.getElementById("assignee-select");
+
+  
+      function addTask() {
+        const taskText = taskInput.value;
+        const assignees = Array.from(assigneeSelect.selectedOptions).map(option => option.value);
+
+        if (taskText.trim() !== "" && assignees.length > 0) {
+          assignees.forEach(assignee => {
+            const taskItem = document.createElement("li");
+            taskItem.innerHTML = `
+              <span > ${assignee} : ${taskText} </span>
+              <button class="delete-btn">Delete</button>
+            `;
+
+           
+            const deleteBtn = taskItem.querySelector(".delete-btn");
+            deleteBtn.addEventListener("click", function () {
+              taskItem.remove();
+            });
+
+            taskItem.style.display ="flex";
+            taskItem.style.justifyContent = "space-between";
+            taskItem.style.alignItems = "center";
+            taskItem.style.marginBottom = "10px";
+
+            deleteBtn.style.backgroundColor = "#f44336";
+            deleteBtn.style.color = "#ffffff";
+            deleteBtn.style.padding = "15px 20px";
+            deleteBtn.style.border = "none";
+            deleteBtn.style.borderRadius = "4px";
+            deleteBtn.style.cursor = "pointer";
+            deleteBtn.style.fontSize = "12  px";
+
+            userTaskList.appendChild(taskItem);
+          });
+
+          taskInput.value = "";
+        }
+      }
+
+      addTaskBtn.addEventListener("click", addTask);
+
+
+      taskInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          addTask();
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>

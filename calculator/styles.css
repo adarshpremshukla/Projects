@@ -1,0 +1,34 @@
+.rishi{
+    background: peachpuff;
+    margin: auto;
+    padding: 60px;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 100px;
+    text-align: center;
+    background-color: #fd0000;}
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;}
+button {
+    padding: 10px;
+    font-size: 2.2rem;}
+.operator {
+    background-color: #ff6600;
+    color: #fff;
+}
+.number {
+    background-color: #fff;
+    color: #333;
+}

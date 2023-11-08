@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    font-family: "Open sans", sans-serif;
+}
+
+header img {
+    padding: 0vw;
+    align-items: center;
+    padding-top: 0vw;
+    padding-inline-start: 0vw;
+}
+
+#titleinner {
+    /* color: black; */
+    font-weight: bold;
+    font-size: 3rem;
+    color: #DE6B35  ;
+    margin-top: 2rem;
+}
+
+#innertext {
+    color: springgreen;
+    margin-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+#about {
+    text-align: center;
+    font-size: 5rem;
+    color: mediumspringgreen;
+    font-family: 'Times New Roman', Times, serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-top: -1rem;
+    margin-left: 1px;
+    padding-top: 40px;
+}
+
+#about1 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: lemonchiffon;
+}
+
+#text1 {
+    color: slateblue;
+    text-align: center;
+    
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+.container {
+    background-image: url(image.jpg);
+    background-position: center;
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15px;
+    width: auto;
+    background-color: #0d5c91;
+    padding: 0px 15px 10px 15px;
+    border: 2px solid rgb(106, 7, 88);
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 15px 5px rgb(7, 93, 214);
+    margin-top: 4rem;
+}
+
+
+.editor {
+    background-color: indigo;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-left: 22rem;
+    margin-top: 1.5rem;
+    border-radius: 7%;
+    text-shadow: #1d861d;
+}
+
+#title {
+    box-shadow: #c23939;
+    border-radius: 1rem;
+    height: 3rem;
+    margin: 1%;
+    width: 22rem;
+    background-color: darkmagenta;
+}
+
+#image {
+    box-shadow: #000000;
+    border-radius: 1rem;
+    height: 3rem;
+    margin: 1%;
+    background-color: darkmagenta;
+    width: 22rem;
+}
+
+#video {
+    box-shadow: 3px darkmagenta;
+    border-radius: 1rem;
+    height: 3rem;
+    margin: 1%;
+    background-color: darkmagenta;
+    width: 22rem;
+}
+
+#content {
+    box-shadow: 3px #000000;
+    border-radius: 1rem;
+    margin: 1%;
+    height: 200px;
+    background-color: darkmagenta;
+    width: 22rem;
+}
+
+.editor input[type="text"],
+.editor textarea {
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 5px;
+}
+
+.editor button {
+    padding: 10px 15px;
+    background-color: lemonchiffon;
+    color: dodgerblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    width: 10rem;
+}
+
+.preview {
+    margin-top: 100px;
+    height: auto;
+}

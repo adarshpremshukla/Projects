@@ -1,0 +1,30 @@
+body {
+    background-color:black; 
+    font-family: 'Times New Roman', Times, serif; 
+    color:white
+}
+
+h1{
+    color:rgb(145, 29, 29); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.maindiv {
+background-color: rgb(206, 133, 188);
+color: black;
+width: 700px;
+height: 600px;
+padding: 50px;
+border-radius: 5px;
+text-align: center;
+margin: auto;
+}
+
+.maindiv .rishi{
+    background: rgb(221, 59, 175);
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+
+}
+

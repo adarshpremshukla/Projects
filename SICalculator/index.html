@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+    
+            <div class="rishi"><h2>Amount</h2> <input type="number"  id="principal">
+            <br/>
+    
+            <h2>Rate</h2> <input type="range" id="rate" min="1" max="20"  step="0.25" onchange="updateRate()">
+            <span id="rate_val">
+            </span>% <br/> 
+
+        
+            <h2>No. of Years</h2>
+            <input type="number" id="years" list="all_years"> 
+            <h2>Interest :</h2> <span id="result"></span><br>
+    
+            <button onclick="compute()"> <h2>Compute Interest</h2></button>
+           <span id="result"></span>
+          
+        </div>
+        </div>
+        <!-- <footer>
+            &#169; This Calculator belongs to Adarsh Shukla
+        </footer> -->
+    </body>
+</html>
